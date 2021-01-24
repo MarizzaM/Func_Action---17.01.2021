@@ -23,14 +23,6 @@ namespace Executor
             f(arr);
         }
 
-        static double[] arr = { 1, 2, 5, 1001239, -7.4568, 1231.5345, 2.22222, 3.14 };
-        static double min = 6.7;
-        static double ExecutorOnArrayDouble(Func<double[], double, double> f)
-        {
-            double result = f(arr, min);
-            return result;
-        }
-
         // use action or function
         // Executor which gets as parameter int, int and invoked the function
         //  From main call this executor with lambda and write an expression which prints their sum 
@@ -62,7 +54,7 @@ namespace Executor
                 double sum = 0.0;
                 foreach (var item in rra)
                 {
-                    sum = sum + (item > min ? item : 0.0);
+                    sum += sum;
                 }
                 return sum;
             });
